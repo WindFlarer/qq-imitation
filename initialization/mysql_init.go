@@ -19,12 +19,13 @@ func InitDB() {
 		":" + config.Conf.Mysql.Port +
 		")/" + config.Conf.Mysql.Dbname +
 		"?" + config.Conf.Mysql.Config
-	fmt.Println(dsn)
+
 	db, _ := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		panic("failed to connect database")
 	}
 	DB = db
+	fmt.Println("连接数据库成功")
 }
 
 func InitTable() {
