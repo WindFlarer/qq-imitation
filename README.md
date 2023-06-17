@@ -1,2 +1,2 @@
-# qq-imitation
-仿qq
+# wechat-imitation
+仿微信
