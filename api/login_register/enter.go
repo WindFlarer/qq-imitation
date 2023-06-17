@@ -10,5 +10,6 @@ type APIGroup struct {
 
 // 引入相关服务方便后续调用
 var (
-	loginService = service.ServiceGroupApp.LoginRegisterGroup.LoginService
+	loginService    = service.ServiceGroupApp.LoginRegisterGroup.LoginService
+	registerService = service.ServiceGroupApp.LoginRegisterGroup.RegisterService
 )
