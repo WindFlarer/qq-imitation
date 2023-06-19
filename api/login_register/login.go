@@ -18,12 +18,12 @@ func (r *LoginAPI) Login(c *gin.Context) {
 		return
 	}
 	// 登录逻辑
-	err = loginService.Login(loginReq)
+	token, err := loginService.Login(loginReq)
 	// 登录失败
 	if err != nil {
 		response.FailWithMessage(err.Error(), c)
 		return
 	}
 	// 登录成功
-	response.OkWithMessage("登录成功", c)
+	response.OkWithData(token, c)
 }
